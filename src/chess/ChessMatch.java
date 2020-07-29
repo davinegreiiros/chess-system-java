@@ -28,7 +28,7 @@ public class ChessMatch  { //partida de xadrez
 		board.placePiace(piece, new ChessPosition(column, row).toPosition());
 	}
 	private void initialSetup() {
-<<<<<<< HEAD
+
 		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
         placeNewPiece('c', 2, new Rook(board, Color.WHITE));
         placeNewPiece('d', 2, new Rook(board, Color.WHITE));
@@ -42,13 +42,13 @@ public class ChessMatch  { //partida de xadrez
         placeNewPiece('e', 7, new Rook(board, Color.BLACK));
         placeNewPiece('e', 8, new Rook(board, Color.BLACK));
         placeNewPiece('d', 8, new King(board, Color.BLACK));
-=======
+
 		placeNewPiece('b',6, new Rook(board,Color.WHITE));
 		placeNewPiece('e', 8 , new King(board,Color.BLACK));
 		placeNewPiece('e',1, new King(board,Color.WHITE));
 		
 		
->>>>>>> aa025f2d606e5c2deb45bc291777a467df8a8b74
+
 	}
 	
 }
