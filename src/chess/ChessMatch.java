@@ -103,10 +103,9 @@ public class ChessMatch { //partida de xadrez
 	}
 	
 	private void undoMove(Position source, Position target, Piece capturedPiece) {
-		ChessPiece p = (ChessPiece)board.removePiece(target);
-		p.decreaseMoveCount();
+		Piece p = board.removePiece(target);
 		board.placePiece(p, source);
-		
+
 		if (capturedPiece != null) {
 			board.placePiece(capturedPiece, target);
 			capturedPieces.remove(capturedPiece);
@@ -150,7 +149,7 @@ public class ChessMatch { //partida de xadrez
 		}
 		throw new IllegalStateException("There is no " + color + " king on the board");
 	}
-	
+
 	private boolean testCheck(Color color) {
 		Position kingPosition = king(color).getChessPosition().toPosition();
 		List<Piece> opponentPieces = piecesOnTheBoard.stream().filter(x -> ((ChessPiece)x).getColor() == opponent(color)).collect(Collectors.toList());
