@@ -1,3 +1,3 @@
 # chess-system-java
 
-Jogo de xadrez
+Repositorio para o Jogo de xadrez
